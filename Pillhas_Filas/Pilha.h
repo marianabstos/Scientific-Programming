@@ -11,8 +11,8 @@ using namespace std;
 class Pilha
 {
 	private:
-		char s[MAX];
-		int topo;
+		char s[MAX]; //Vetor de caracteres
+		int topo; //Inteiro que indicará a posição topo da pilha
 		
 	public:
 		Pilha();
@@ -27,36 +27,36 @@ Pilha::Pilha (){
 }
 
 char* Pilha::getS(){
-	return s;
+	return s; //Retorna os caracteres da pilha
 }
 
 int Pilha::getTopo (){
-	return topo;
+	return topo; //Retorna a posição do topo
 }
 
 void Pilha::inicializa(){
-	topo =-1;
+	topo =-1; //Inicializa topo com -1 para não estourar o tamanho do vetor
 }
 
 void Pilha::empilha(string palavra){
 	
-	int tam = palavra.length();
-	for(int i=0; i<tam; i++){
-		topo++;
-		s[topo] = palavra[i];
+	int tam = palavra.length(); //Seta tam com o tamanho da palavra q deve ser empilhada
+	for(int i=0; i<tam; i++){ //For para empilhar palavra
+		topo++; //Incrementa topo, dado que será inserido um novo elemento
+		s[topo] = palavra[i]; //insere no topo o elemento
 	}
 
 }
 
 string Pilha::desempilha(){
 	
-	string palavra;
-	int tam;
+	string palavra; //Vetor que receberá letras desempilhadas
+	int tam; //tamanho da palavra empilhada
 	
-	tam = strlen(s);
-	for(int i=0; i<tam; i++){
-		palavra[i] = s[topo];
-		topo--;
+	tam = strlen(s); //atribui a tam o valor do tamanho da palvra empilhada
+	for(int i=0; i<tam; i++){ //for para desempilhar letras
+		palavra[i] = s[topo];  //retira letra do topo e insere na string palavra
+		topo--; //atualiza variável topo
 	}
 
 	return palavra.c_str();

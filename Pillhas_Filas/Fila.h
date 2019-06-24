@@ -6,10 +6,10 @@
 class Fila
 {
 	private:
-		int primeiro;
-		int ultimo;
-		int tamanho;
-		string pessoas[MAX];
+		int primeiro; //posição do primeiro elemento da fila
+		int ultimo; //posição do último elemento da fila
+		int tamanho; //tamanho da fila 
+		string pessoas[MAX]; //string de pessoas que serão inseridas na fila
 		
 	public:
 		Fila();
@@ -25,7 +25,8 @@ class Fila
 Fila::Fila(){
 	
 }
-
+//Inicializa atributos para não estourar valor do vetor 
+//ou acessar endereço errado
 void Fila::inicializa(){
 	primeiro =-1;
 	ultimo = -1;
@@ -34,35 +35,35 @@ void Fila::inicializa(){
 }
 
 int Fila::getPrimeiro(){
-	return primeiro;
+	return primeiro; //retorna posição do primeiro elemento da fila
 }
 
 int Fila::getUltimo(){
-	return ultimo;
+	return ultimo; //retorna posição do ultimo elemento da fila
 }
 
 int Fila::getTamanho(){
-	return tamanho;
+	return tamanho; //retorna tamanho da fila
 }
 
 string * Fila::getPessoas(){
-	return pessoas;
+	return pessoas; //retorna pessoas da fila
 }
 
 void Fila::enfileira(string nomes){
-	ultimo++;
-	pessoas[ultimo] = nomes;
-	tamanho++;
+	ultimo++; //atualiza a ultima posição da fila, dado que está sendo inserido um elemento
+	pessoas[ultimo] = nomes; //insere no final da fila o elemento
+	tamanho++; //atualiza tamanho da fila
 }
 
 string Fila::desenfileira(){
 	
-	string nome;
+	string nome; //nome da pessoa que esta saindo da fila
 	
-	primeiro++;
-	nome = pessoas[primeiro];
+	primeiro++; //atualiza primeiro elemento da fila, dado que está sendo retirado um elemento
+	nome = pessoas[primeiro]; //atualiza nome de quem saiu da fila
 	
-	return nome;
+	return nome; //retorna nome de quem saiu da fila
 }
 
 #endif
