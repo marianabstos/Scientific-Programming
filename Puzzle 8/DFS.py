@@ -1,3 +1,6 @@
+from Grafo import Grafo
+import copy
+
 class DFS:
     def __init__(self, estadoInicial, objetivo):
         self.estadoInicial = estadoInicial
@@ -44,7 +47,7 @@ class DFS:
 
             if self.testeSolucao(g.getPuzzleStore()[vertice]) == True:
                 print("Solução Encontrada")
-                print(acoes)
+                print(self.acoes)
                 break
 
             self.acoes.append(g.getDirecao()[filho])

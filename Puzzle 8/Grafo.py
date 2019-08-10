@@ -1,4 +1,5 @@
 from random import random
+from Puzzle import Puzzle
 
 class Grafo:
     def __init__(self,puzzle):

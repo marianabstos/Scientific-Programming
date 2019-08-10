@@ -1,3 +1,4 @@
+from Grafo import Grafo
 import copy
 
 class SubidaEncosta:
