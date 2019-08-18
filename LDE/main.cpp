@@ -112,23 +112,7 @@ if(letra == "f"){
 	cout<<"Ultimo: "<<f.getUltimo()<<endl;
 	f.imprimir();
 	
-	cout<<"desenfileirando..."<<endl;
-	cout<<"Primeiro: "<<f.getPrimeiro()<<endl;
-	cout<<"Ultimo: "<<f.getUltimo()<<endl;
-	f.desenfileira();
-	cout<<"Primeiro e Ultimo atualizado..."<<endl;
-	cout<<"Primeiro: "<<f.getPrimeiro()<<endl;
-	cout<<"Ultimo: "<<f.getUltimo()<<endl;
-	f.imprimir();
-	
-	cout<<"desenfileirando..."<<endl;
-	cout<<"Primeiro: "<<f.getPrimeiro()<<endl;
-	cout<<"Ultimo: "<<f.getUltimo()<<endl;
-	f.desenfileira();
-	cout<<"Primeiro e Ultimo atualizado..."<<endl;
-	cout<<"Primeiro: "<<f.getPrimeiro()<<endl;
-	cout<<"Ultimo: "<<f.getUltimo()<<endl;
-	f.imprimir();
+
 	
 	
 }
