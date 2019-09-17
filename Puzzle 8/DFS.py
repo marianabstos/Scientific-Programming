@@ -3,19 +3,21 @@ import copy
 
 class DFS:
     def __init__(self, estadoInicial, objetivo):
-        self.estadoInicial = estadoInicial
-        self.objetivo = objetivo
-        self.acoes = []
+        self.estadoInicial = estadoInicial #vertice inicial do DFS
+        self.objetivo = objetivo #vertice objetivo do DFS
+        self.acoes = [] #lista de ações tomadas pelo DFS
     
     def getAcoes(self):
         return self.acoes
     
+    #Função que verifica se o vértice é a solução do quebra-cabeça
     def testeSolucao(self, estadoAtual):
         if self.objetivo == estadoAtual:
             return True
         else:
             return False
     
+    #Função onde ocorre o DFS
     def buscaProfundidade(self):
         visitado = []
         stack = [0]

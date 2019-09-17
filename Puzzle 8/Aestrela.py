@@ -4,19 +4,21 @@ import copy
 
 class Aestrela:
     def __init__(self, estadoInicial, objetivo):
-        self.estadoInicial = estadoInicial
-        self.objetivo = objetivo
-        self.acoes = []
+        self.estadoInicial = estadoInicial #vertice inicial do A*
+        self.objetivo = objetivo #vertice objetivo do A*
+        self.acoes = [] #Lista de ações tomadas pelo A*
         
     def getAcoes(self):
         return self.acoes
     
+    #Função que verifica se o vértice é a solução do quebra-cabeça
     def testeSolucao(self, estadoAtual):
         if self.objetivo == estadoAtual:
             return True
         else:
             return False
-        
+    
+    #Função onde ocorre o A*
     def buscaAestrela(self):
         visita = [0]
         heuristica = {}

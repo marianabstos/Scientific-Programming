@@ -3,13 +3,14 @@ import copy
 
 class BFS:
     def __init__(self, estadoInicial, objetivo):
-        self.estadoInicial = estadoInicial
-        self.objetivo = objetivo
-        self.acoes = []
+        self.estadoInicial = estadoInicial #vertice inicial do BFS
+        self.objetivo = objetivo #vertice objetivo do BFS
+        self.acoes = [] #lista de ações tomadas pelo BFS
         
     def getAcoes(self):
         return self.acoes
     
+    #Função que evita do algoritmo sempre expandir para posições opostas
     def trataAcoesRepetidas(self,acaoAtual, ultimasDuasAcoes):
         if len(ultimasDuasAcoes) <2:
             return True
@@ -23,13 +24,15 @@ class BFS:
             return False
         else:
             return True
-
+        
+    #Função que verifica se o vértice é a solução do quebra-cabeça
     def testeSolucao(self, estadoAtual):
         if self.objetivo == estadoAtual:
             return True
         else:
             return False
     
+    #Função onde ocorre o BFS
     def buscaLargura(self):
         visitado = []
         fila = []

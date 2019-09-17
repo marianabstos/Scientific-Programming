@@ -3,19 +3,21 @@ import copy
 
 class SubidaEncosta:
     def __init__(self, estadoInicial, objetivo):
-        self.estadoInicial = estadoInicial
-        self.objetivo = objetivo
-        self.acoes = []
+        self.estadoInicial = estadoInicial #vertice inicial da Subida Encosta
+        self.objetivo = objetivo #Vertice objetivo da Subida Encosta
+        self.acoes = [] #Lista de ações tomada pela Subida Encosta
         
     def getAcoes(self):
         return self.acoes
     
+    #Função que verifica se o vértice é a solução do quebra-cabeça
     def testeSolucao(self, estadoAtual):
         if self.objetivo == estadoAtual:
             return True
         else:
             return False
-        
+    
+    #Função onde ocorre a Subida de Encosta
     def subidaEncosta(self):
         visita = [0]
         
