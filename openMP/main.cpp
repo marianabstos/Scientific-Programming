@@ -7,23 +7,27 @@
 #define MAX 70
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-
+#Equação A
 float funcao_a(float x){
 	return x*x;
 }
 
+#Derivada Equação A
 float derivada_funcao_a(float x){
 	return 2*x;
 }
 
+#Equação B
 float funcao_b(float x){
 	return ((x*x*x) - (2*(x*x)) + 2);
 }
 
+#Derivada Equação B
 float derivada_funcao_b(float x){
 	return ((3*(x*x)) - (4*x));
 }
 
+#Cálculo de Newton Raphson para a Equação A
 void newton_raphson_a(int num, float beta){
 	float x[MAX];
 	float f[MAX];
@@ -52,6 +56,7 @@ void newton_raphson_a(int num, float beta){
 	printf("#########################################\n");
 }
 
+#Cálculo de Newton Raphson para a Equação B 
 void newton_raphson_b(int num, float beta){
 	float x[MAX];
 	float f[MAX];
